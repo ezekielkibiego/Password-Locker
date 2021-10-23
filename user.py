@@ -3,20 +3,20 @@ class User():
     user_list = []
 
     def __init__(self, username, password):
-        """
-        Initialize the user.
-        """
+        '''
+        Method to initialize the user.
+        '''
         self.username = username
         self.password = password
 
     def save_user(self):
-        """
-        Save user to list.
-        """
+        '''
+        method to save user to the list.
+        '''
         User.user_list.append(self)
 
     def delete_user(self):
-        """ 
-        Delete user from the list
-        """
+        '''
+        Method to delete user from the list.
+        '''
         User.user_list.remove(self)
