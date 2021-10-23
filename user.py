@@ -1,21 +1,22 @@
- class user: 
-    """
-    create user class that generates new instances of a user.
+class User():
 
-    """
+    user_list = []
 
-    def _init_(self, username, password):
-
+    def __init__(self, username, password):
         """
-
-        method used to define the properties of user.
-
+        Initialize the user.
         """
         self.username = username
         self.password = password
 
-    def saver_user(self):
+    def save_user(self):
         """
-        
+        Save user to list.
+        """
+        User.user_list.append(self)
 
+    def delete_user(self):
+        """ 
+        Delete user from the list
         """
+        User.user_list.remove(self)
