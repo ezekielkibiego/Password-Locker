@@ -5,20 +5,20 @@ from user import User
 class TestUser(unittest.TestCase):
     def setUp(self):
         '''
-        Method for the test class to create a new user
+        Function for the test class to create a new user
         '''
-        self.new_user = User("ezekiel", "22ezekiel")
+        self.new_user = User("kezekiel", "22ezekiel")
 
     def test_user_created(self):
         '''
-        Method to test to check if the user object is created successfully
+        Function to test to check if the user object is created successfully
         '''
-        self.assertEqual(self.new_user.username, "ezekiel")
+        self.assertEqual(self.new_user.username, "kezekiel")
         self.assertEqual(self.new_user.password, "22ezekiel")
 
     def test_user_save(self):
         '''
-        Method to check if the user object is saved to the user accounts list.
+        Function to check if the user object is saved to the user accounts list.
         '''
         self.assertEqual(len(User.user_list), 0)
         self.new_user.save_user()
@@ -26,7 +26,7 @@ class TestUser(unittest.TestCase):
 
     def test_delete_user(self):
         '''
-        Method to check if the user was deleted from the user list list.
+        Function to check if the user was deleted from the user list list.
         '''
         self.assertEqual(len(User.user_list), 0)
         self.new_user.save_user()
@@ -34,6 +34,7 @@ class TestUser(unittest.TestCase):
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list), 0)
 
+    @classmethod
     def find_user(cls, username):
         '''
         Method to find user by username.
@@ -45,7 +46,7 @@ class TestUser(unittest.TestCase):
     @classmethod
     def user_exists(cls, username):
         '''
-        method to check if user exists.
+        method to check if user exists
         '''
         for user in cls.user_list:
             if user.username == username:
@@ -55,7 +56,7 @@ class TestUser(unittest.TestCase):
     @classmethod
     def check_user(cls, username, password):
         '''
-        Method to check if user exists and if password is correct
+        Method check if user exists and if password is correct.
         '''
         user = cls.find_user(username)
         if user and user.password == password:
