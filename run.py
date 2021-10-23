@@ -66,7 +66,7 @@ def main():
     name = input()
     while True:
         print('*'*50)
-        print("Welcome {name} ...\n kindly, use the following to proceed.\n ca ---  Create New Account  \n lg - to login to your account  \n da -display account \n ex -exit from app")
+        print(f"Welcome {name} ...\n kindly, use the following to proceed.\n ca ---  Create New Account  \n lg - to login to your account  \n da -display account \n ex -exit from app")
         print('*'*50)
         short_code=input("").upper().strip()
 
