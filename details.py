@@ -2,50 +2,50 @@ import random
 import string
 
 
-class Credentials():
-    user_credentials = []
+class Details():
+    user_details = []
 
-    def __init__(self, account_name, user_account_username, user_account_password):
+    def __init__(self, account_media, user_account_username, user_account_password):
         '''
-            Function to initialize user credentials.
+            Function to initialize user details.
         '''
-        self.account_name = account_name
+        self.account_media = account_media
         self.user_account_username = user_account_username
         self.user_account_password = user_account_password
 
-    def save_credentials(self):
+    def save_details(self):
         '''
-            Function to save credentials into user_credentials.
+            Function to save details into user_details.
         '''
-        Credentials.user_credentials.append(self)
+        Details.user_details.append(self)
 
-    def delete_credentials(self):
+    def delete_details(self):
         '''
-            Function to delete saved credential from the user_credentials.
+            Function to delete saved detail from the user_details.
         '''
-        Credentials.user_credentials.remove(self)
+        Details.user_details.remove(self)
 
     @classmethod
-    def find_by_account_name(cls, account_name):
+    def find_by_account_media(cls, account_media):
         '''
-            Method to take and return credentials that match the account_name.
+            Method to take and return details that match the account_name.
         '''
-        for credentials in cls.user_credentials:
-            if credentials.account_name == account_name:
-                return credentials
+        for details in cls.user_details:
+            if details.account_media == account_media:
+                return details
         return False
 
     @classmethod
-    def display_credentials(cls):
+    def display_details(cls):
         '''
-            Method to return and display the all credentials.
+            Method to return and display the all details.
         '''
-        return cls.user_credentials
+        return cls.user_details
 
     @classmethod
     def generate_password(cls, password_length):
         '''
-           Method to generate random password for a user creating a new account in the the user_credentials.
+           Method to generate random password for a user creating a new account in the the user_details.
         '''
         alpa = string.ascii_letters + string.digits
         password = ''.join(random.choice(alpa)

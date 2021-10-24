@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.8
 from user import User
-from details import Credentials
+from details import Details
 
 def function():
 	print("               ____                        _ ")
@@ -26,7 +26,7 @@ def delete_user(username):
     delete user
     '''
     User.delete_user(username)
-def find_existing_user(username):
+def find_user_existing(username):
     '''
     find if user exists
     '''
@@ -35,71 +35,146 @@ def find_user_password(username, password):
     '''
     find if the user enter the correct username and password
     '''
-    return User.find_user(username, password)
-def create_new_credential(account_name, account_username, account_password):
+    return User.check_user(username, password)
+def create_new_detail(account_name, account_username, account_password):
     '''
-    create a new credential
+    create a new detail
     '''
-    new_credential = Credentials(
+    new_detail = Details(
         account_name, account_username, account_password)
-    return new_credential
-def save_credentials(credentials):
+    return new_detail
+def save_details(details):
     '''
-    save credentials
+    save details
     '''
-    credentials.save_credentials()
-def display_credentials():
+    details.save_details()
+def display_details():
     """
-    display credentials
+    display details
     """
-    return Credentials.display_credentials()
-def delete_credential(account_name):
+    return Details.display_details()
+def delete_detail(account_media):
     '''
-    delete credentials
+    delete details
     '''
-    return Credentials.delete_credentials(account_name)
-def find_credential(account_name):
+    return Details.delete_details(account_media)
+def find_details(account_name):
     '''
-    find credentials
+    find details
     '''
-    return Credentials.find_by_account_name(account_name)
+    return Details.find_by_account_media(account_name)
 def generate_password(password_length):
     """
     generate a random password
     """
-    return Credentials.generate_password(password_length)
+    return Details.generate_password(password_length)
 
 def main():
-    print("Hi, What is your name?")
+    print("Hi, Please enter your ?")
     name = input()
     while True:
-        print('*'*100)
-        print(f"Welcome {name} ...\n kindly, use the following to proceed.\n ca ...  Create New Account \n fa ...  Find Account  \n lg ... to login to your account  \n da ... display account \n ex ... exit from app")
-        print('*'*100)
+        print('.......................................................................................')
+        print(f"Welcome {name} ...\n kindly, use the following to proceed.\n ca ...  Create a New Account \n fa ...  Find Existing Account  \n lg ... SignIn to your account  \n da ... display account \n ex ... exit from app")
+        print('.......................................................................................')
         short_code=input("").lower().strip()
 
         if short_code == 'ca':
-            print("Create New User Account")
-            print('*'*100)
+            print("Create a New User Account")
+            print('.......................................................................................')
             print("Enter your username .....")
             username = input()
-            print("Enter password .....")
-            password = input()
+            print("Enter your password .....")
+            user_password = input()
             save_user(create_new_user(
-                      username, password))
-            print('*'*100)
+                      username, user_password))
+            print('.......................................................................................')
             print(
-                f"Bravo! {name}. You've created Account successfully. lg to login to your account")
-            print('*'*100)
+                f"Bravo {name}! You've created Account successfully. lg to SignIn to your account")
+            print('.......................................................................................')
 
         elif short_code == 'lg' or short_code == 'da':
-            print('*'*100)
+            print('.......................................................................................')
             print("Enter your username ...")
             username = input()
             print("Enter your password ...")
-            password = input()
+            user_password = input()
         
-        
+            if find_user_existing(username):
+                if find_user_password(username, user_password):
+                    print("\n")
+                    print(f"Happy to see you again, welcome {username}")
+                    print('.......................................................................................')
+                    while True:
+                        print("Select one of the following to proceed: \n")
+                        print(
+                            "1. Create a new credential\n2. View saved credentials\n3. Delete credentials\n4. Logout")
+                        print("\n")
+                        log_choice = int(input())
+                        if log_choice == 1:
+                            print(
+                                "Enter the account name you want to create eg twitter,instagram....")
+                            account_name = input()
+                            print("Enter the username of the account above")
+                            account_username = input()
+                            print('\n')
+                            print('.......................................................................................')
+                            print(
+                                "Do you want to generate a random password or enter your own password?\n \n   Enter 1 to generate a random password\n   Enter 2 to enter your own password")
+                            print('.......................................................................................')
+                            print("\n")
+                            choice = int(input())
+                            if choice == 1:
+                                print(
+                                    "Enter legnth of your desired password?")
+                                password_length = int(input())
+                                account_password = generate_password(
+                                    password_length)
+                                print(
+                                    f"Your generated password is {account_password}")
+                            elif choice == 2:
+                                print("Enter own password of the account")
+                                account_password = input()
+                            else:
+                                print("Invalid input")
+                            save_details(create_new_detail(
+                                account_name, account_username, account_password))
+                            print('\n')
+                            print(
+                                f"New Detail with account name '{account_name}' and password '{account_password}' has been created \n")
+                            print('.......................................................................................')
+                        elif log_choice == 2:  
+                            print('\n')
+                            print(
+                                "Here is a list of all your details'accounts in the application")
+                            print('.......................................................................................')
+                            if display_details():
+                                for media in display_details():
+                                    print(
+                                        f"{media.account_media} Account, username: {media.user_account_username} and password: {media.user_account_password} \n")
+                            else:
+                                print("Oops! No accounts saved yet!")
+                            print('.......................................................................................')
+                        elif log_choice == 3: 
+                            print("Enter the media name you want to delete")
+                            account_name_to_delete = input()
+                            if find_details(account_name_to_delete):
+                                print(
+                                    f"Detail with media name '{account_name_to_delete}' has been deleted")
+                                print('\n')
+                            else:
+                                print('.......................................................................................')
+                                print(
+                                    f"Detail with media name '{account_name_to_delete}' does not exist")
+                                print('.......................................................................................')
+                        elif log_choice == 4:  
+                            print("You have successfully Signed out")
+                            print('.......................................................................................')
+                            break
+                        else: 
+                            print("No such media exists!")
+
+            else:
+                print('Enter valid Details')
         elif short_code == 'ex':
             print("Thank you for using our app, Bye!")
             break
