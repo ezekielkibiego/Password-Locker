@@ -47,7 +47,7 @@ chmod +x run.py
 |Find a stored credential based on account name|Enter ```2```| Enter the Account Name you want to search for and returns the account details|
 |Delete an existing credential that you don't want anymore|Enter ```3```|Enter the account name of the Credentials you want to delete and returns Detail with media name '{account_name_to_delete}' has been deleted, if the account has been deleted and Detail with media name '{account_name_to_delete}' does not exist if the account doesn't exixt|
 |Sign Out | Enter ```4```| You have successfully Signed out|
-|Exit the application| Enter ```ex```| The application exits|
+|Exit the application| Enter ```ex```| Thank you for using our app, Bye and the application exits |
 
 
 ### Technologies Used
