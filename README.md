@@ -1,9 +1,10 @@
 # Password Locker
 
+### 20th Oct. 2021
+
 ## Author
 
-#### [Ezekiel Kibiego](https://github.com/ezekielkibiego) on 20th Oct. 2021
-
+#### [Ezekiel Kibiego](https://github.com/ezekielkibiego)
 ### Description
 
 This is an application that allows the user to store different accounts' Login Passwords by creating an account that securely stores those credentials. The user can store as many credentials as possible and can delete any or all of them at any time.
