@@ -20,20 +20,6 @@ class User():
         Function to delete user from the list.
         '''
         User.user_list.remove(self)
-
-    # @classmethod
-    # def find_user(self):
-    #     '''
-    #     function to check whether the user account exists in the user accounts list.
-    #     '''
-    #     self.find_user = User.find_user('ezekiel')
-
-    # def find_user_exist(self):
-    #     '''
-    #     Function to check if the user's account exists in the user accounts list.
-    #     '''
-    #     self.find_user_exist = User.user_exist('kezekiel')
-
     @classmethod
     def find_user(cls, username):
           '''
