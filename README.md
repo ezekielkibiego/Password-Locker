@@ -45,7 +45,7 @@ chmod +x run.py
 |Store a new detail in the application| Enter ```1```|Enter Account, username, password<br>choose ```2``` to enter your password or ```1``` for the application to generate a password for you |
 |Display all stored credentials | Enter ```2```|A list of all credentials that has been stored or ```Oops! No accounts saved yet!``` |
 |Find a stored credential based on account name|Enter ```2```| Enter the Account Name you want to search for and returns the account details|
-|Delete an existing credential that you don't want anymore|Enter ```3```|Enter the account name of the Credentials you want to delete and returns true if the account has been deleted and false if the account doesn't exixt|
+|Delete an existing credential that you don't want anymore|Enter ```3```|Enter the account name of the Credentials you want to delete and returns Detail with media name '{account_name_to_delete}' has been deleted, if the account has been deleted and Detail with media name '{account_name_to_delete}' does not exist if the account doesn't exixt|
 |Exit the application| Enter ```ex```| The application exits|
 
 
