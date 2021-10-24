@@ -3,11 +3,12 @@ from user import User
 from details import Details
 
 def function():
-	print("               ____                        _ ")
-	print("              |  _ \                      | |")
-	print("              |  __/  / _  |/ __  / __    | |")
-	print("              | |    / (_| |\__ \ \__ \   | |")
-	print("              |_|    \_____| ___/  ___/   |_| ")
+	print("               ____                             _             ")
+	print("              |  _ \                           | |            ")
+	print("              | |_) )  ____    ___    ___      | |            ")
+	print("              |  __/  / _  \  / __|  / __|     | |            ")
+	print("              | |    / (_|  \ \  \__  \ \__    | |___         ")
+	print("              |_|    \_____ / /___ /   /___/   |_____)        ")
 function()
 
 def create_new_user(username, password):
