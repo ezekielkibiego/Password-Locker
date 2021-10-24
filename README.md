@@ -8,6 +8,17 @@
 
 This is an application that allows the user to store different accounts' Login Passwords by creating an account that securely stores those credentials. The user can store as many credentials as possible and can delete any or all of them at any time.
 
+## Screenshot
+
+<img src="">
+
+## User Stories
+The user would like to;
+* To create an account for the application or log into the application.
+* Store my existing acounts login details for various accounts that I have registered for.
+* Generate new password for an account that I haven't registered for and store it with the account name.   
+* Delete stored account login details that I do not want anymore.
+
 ## Setup Requirements
 
 - Git
