@@ -2,7 +2,7 @@
 
 ## Author
 
-#### {Ezekiel Kibiego} (https://github.com/ezekielkibiego) on 20th Oct. 2021
+#### [Ezekiel Kibiego](https://github.com/ezekielkibiego) on 20th Oct. 2021
 
 ### Description
 
