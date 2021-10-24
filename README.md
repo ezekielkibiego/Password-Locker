@@ -11,7 +11,7 @@ This is an application that allows the user to store different accounts' Login P
 
 ## Screenshot
 
-<img src="">
+<img src="assets/Screenshot from 2021-10-25 00-28-31.png">
 
 ## User Stories
 The user would like to;
