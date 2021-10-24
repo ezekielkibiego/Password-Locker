@@ -11,14 +11,14 @@ class TestUser(unittest.TestCase):
 
     def test_user_created(self):
         '''
-        Function to test to check if the user object is created successfully
+        Function to test to find if the user object is created successfully
         '''
         self.assertEqual(self.new_user.username, "kezekiel")
         self.assertEqual(self.new_user.password, "22ezekiel")
 
     def test_user_save(self):
         '''
-        Function to check if the user object is saved to the user accounts list.
+        Function to find if the user object is saved to the user accounts list.
         '''
         self.assertEqual(len(User.user_list), 0)
         self.new_user.save_user()
@@ -26,7 +26,7 @@ class TestUser(unittest.TestCase):
 
     def test_delete_user(self):
         '''
-        Function to check if the user was deleted from the user list list.
+        Function to find if the user was deleted from the user list list.
         '''
         self.assertEqual(len(User.user_list), 0)
         self.new_user.save_user()
