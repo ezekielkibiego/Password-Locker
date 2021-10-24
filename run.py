@@ -2,6 +2,14 @@
 from user import User
 from details import Credentials
 
+def function():
+	print("               ____                        _ ")
+	print("              |  _ \                      | |")
+	print("              |  __/  / _  |/ __  / __    | |")
+	print("              | |    / (_| |\__ \ \__ \   | |")
+	print("              |_|    \_____| ___/  ___/   |_| ")
+function()
+
 def create_new_user(username, password):
     '''
     create a new user
@@ -65,12 +73,36 @@ def main():
     print("Hi, What is your name?")
     name = input()
     while True:
-        print('*'*50)
-        print(f"Welcome {name} ...\n kindly, use the following to proceed.\n ca ---  Create New Account  \n lg - to login to your account  \n da -display account \n ex -exit from app")
-        print('*'*50)
-        short_code=input("").upper().strip()
+        print('*'*100)
+        print(f"Welcome {name} ...\n kindly, use the following to proceed.\n ca ...  Create New Account \n fa ...  Find Account  \n lg ... to login to your account  \n da ... display account \n ex ... exit from app")
+        print('*'*100)
+        short_code=input("").lower().strip()
 
+        if short_code == 'ca':
+            print("Create New User Account")
+            print('*'*100)
+            print("Enter your username .....")
+            username = input()
+            print("Enter password .....")
+            password = input()
+            save_user(create_new_user(
+                      username, password))
+            print('*'*100)
+            print(
+                f"Bravo! {name}. You've created Account successfully. lg to login to your account")
+            print('*'*100)
 
+        elif short_code == 'lg' or short_code == 'da':
+            print('*'*100)
+            print("Enter your username ...")
+            username = input()
+            print("Enter your password ...")
+            password = input()
+        
+        
+        elif short_code == 'ex':
+            print("Thank you for using our app, Bye!")
+            break
 
 if __name__ == '__main__':
     main()
