@@ -106,21 +106,21 @@ def main():
                     print(f"Happy to see you again, welcome {username}")
                     print('.......................................................................................')
                     while True:
-                        print("Select one of the following to proceed: \n")
+                        print("Select one of the following short codes to proceed: \n")
                         print(
-                            "1. Create a new credential\n2. View saved credentials\n3. Delete credentials\n4. Logout")
+                            "1. Create a new details account\n2. View saved details account\n3. Delete details account\n4. Sign Out")
                         print("\n")
                         log_choice = int(input())
                         if log_choice == 1:
                             print(
-                                "Enter the account name you want to create eg twitter,instagram....")
+                                "Enter the account name you want to create example, FB, Twitter, Pinterest...")
                             account_name = input()
-                            print("Enter the username of the account above")
+                            print("Enter the username of the account you have created")
                             account_username = input()
                             print('\n')
                             print('.......................................................................................')
                             print(
-                                "Do you want to generate a random password or enter your own password?\n \n   Enter 1 to generate a random password\n   Enter 2 to enter your own password")
+                                "Do you want to generate a random password or enter own password?\n \n   Enter 1 to generate a random password\n   Enter 2 to enter your own password")
                             print('.......................................................................................')
                             print("\n")
                             choice = int(input())
