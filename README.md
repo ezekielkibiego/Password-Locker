@@ -1,10 +1,13 @@
 # Password Locker
 
-#### Created By Ezekiel Kibiego on 20th Oct. 2021
+#### Created By
+
+#### Ezekiel Kibiego on 20th Oct. 2021
 
 ### Description
 
-This is an application that allows the user to store different accounts' LogIn Passwords by creating an account that securely stores those credentials. The user can store as many credentials as possible and is able to delete any or all of them at any time.
+This is an application that allows the user to store different accounts' Login Passwords by creating an account that securely stores those credentials. The user can store as many credentials as possible and can delete any or all of them at any time.
+
 ## Setup Requirements
 
 - Git
