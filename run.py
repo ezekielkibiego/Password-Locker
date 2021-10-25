@@ -75,7 +75,7 @@ def main():
     name = input()
     while True:
         print('.......................................................................................')
-        print(f"Welcome {name} ...\n kindly, use the following to proceed.\n ca ...  Create a New Account \n fa ...  Find Existing Account  \n lg ... SignIn to your account  \n da ... display account \n ex ... exit from app")
+        print(f"Welcome {name} ...\n kindly, use the following to proceed.\n ca ...  Create a New Account  \n lg ... SignIn to your account  \n da ... display account \n ex ... exit from app")
         print('.......................................................................................')
         short_code=input("").lower().strip()
 

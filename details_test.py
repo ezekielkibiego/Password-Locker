@@ -1,6 +1,7 @@
 import unittest
 from details import Details
 
+
 class TestDetails(unittest.TestCase):
     def setUp(self):
         '''

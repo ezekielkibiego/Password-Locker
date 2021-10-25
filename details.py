@@ -48,4 +48,4 @@ class Details():
            Method to generate random password for a user creating a new account in the the user_details.
         '''
         password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*<?>"
-        return ''.join(random.choice(password) for i in range(stringLength))
+        return ''.join(random.choice(password) for i in range(password_length))
