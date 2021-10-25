@@ -75,7 +75,7 @@ def main():
     name = input()
     while True:
         print('.......................................................................................')
-        print(f"Welcome {name} ...\n kindly, use the following to proceed.\n ca ...  Create a New Account  \n lg ... SignIn to your account  \n da ... display account \n ex ... exit from app")
+        print(f"Welcome {name} ...\n kindly, use the following to proceed.\n ca ...  Create a New Account  \n lg ... SignIn to your account \n ex ... exit from app")
         print('.......................................................................................')
         short_code=input("").lower().strip()
 
@@ -99,7 +99,12 @@ def main():
             username = input()
             print("Enter your password ...")
             user_password = input()
-        
+            
+            if username != 'kezekiel' and user_password != '22ezekiel':
+                    print('The account does not exist, please create a new account')
+            else:
+                    print(f'Hello {username}. This is your password locker account, Welcome!')
+
             if find_user_existing(username):
                 if find_user_password(username, user_password):
                     print("\n")
